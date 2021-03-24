@@ -23,7 +23,7 @@
   }
 </style>
 
-<img src="https://nioux.github.io/AideDeJeu/Hereva/images/title_background.png" style='position:absolute;top:0px;left:0px;width:816px'/>
+<img src="https://raw.githubusercontent.com/Nioux/AideDeJeu/master/Hereva/images/title_background.png" style='position:absolute;top:0px;left:0px;width:816px'/>
 
 <div style='margin-top:150px;'></div>
 
