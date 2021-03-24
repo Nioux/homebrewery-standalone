@@ -1,8 +1,4 @@
 
-<img src="https://raw.githubusercontent.com/Nioux/AideDeJeu/master/Hereva/images/title_background.png" style='position:absolute;top:0px;left:0px;width:816px'/>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
-
 <div style='margin-top:150px;'></div>
 
 <div class="wide">
