@@ -1,4 +1,6 @@
 
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
 <style type="text/css">
   @font-face {
     font-family: 'Nodesto Caps Condensed';
