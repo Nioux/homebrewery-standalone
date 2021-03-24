@@ -28,8 +28,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: npm install
-      # - run: npm run hb -- witchcraft_fr.md witchcraft_fr.pdf
-      - run: node --max-old-space-size=8192 bin/homebrewery.js "witchcraft_fr.md" "witchcraft_fr.pdf"
+      - run: npm run hb -- witchcraft_fr.md witchcraft_fr.pdf
+      # - run: node bin/homebrewery.js "witchcraft_fr.md" "witchcraft_fr.pdf"
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
