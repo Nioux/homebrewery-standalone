@@ -36,7 +36,8 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: true
           title: "Preview"
-          files: *.pdf
+          files: |
+            *.pdf
 
 
 
