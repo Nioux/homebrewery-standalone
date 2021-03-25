@@ -38,6 +38,9 @@ jobs:
           done
       # - run: npm run hb -- witchcraft_fr.md witchcraft_fr.pdf
       # - run: node bin/homebrewery.js "witchcraft_fr.md" "witchcraft_fr.pdf"
+      - run: npm install @actions/core
+      - run: npm install @actions/github
+      - run: 'index.js'
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
