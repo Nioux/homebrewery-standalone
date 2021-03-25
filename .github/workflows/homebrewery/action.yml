@@ -1,5 +1,7 @@
 name: homebrewery
+
 description: 'Convert markdown to pdf with homebrewery style'
+
 inputs:
   filename:
     description: 'Name of the file without extension'
@@ -8,6 +10,11 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - uses: actions/checkout@v2
+    - run: npm install
     - run: npm run hb -- ${{inputs.filename}}.md ${{inputs.filename}}.pdf
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
