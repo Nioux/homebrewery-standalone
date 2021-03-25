@@ -1,0 +1,21 @@
+name: homebrewery
+description: 'Convert markdown to pdf with homebrewery style'
+inputs:
+  filename:
+    description: 'Name of the file without extension'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: npm run hb -- ${{inputs.filename}}.md ${{inputs.filename}}.pdf
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "${{inputs.filename}}"
+        prerelease: true
+        title: "${{inputs.filename}}"
+        files: ${{inputs.filename}}.pdf
+
+
+
