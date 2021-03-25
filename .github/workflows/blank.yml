@@ -28,7 +28,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - run: npm install
-      - run: npm run hb -- witchcraft_fr.md witchcraft_fr.pdf
+      - id: files
+        uses: jitterbit/get-changed-files@v1
+      - run: |
+          for changed_file in ${{ steps.files.outputs.all }}; do
+            npm run hb -- ${changed_file} ${changed_file}.pdf
+          done
+      # - run: npm run hb -- witchcraft_fr.md witchcraft_fr.pdf
       # - run: node bin/homebrewery.js "witchcraft_fr.md" "witchcraft_fr.pdf"
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
